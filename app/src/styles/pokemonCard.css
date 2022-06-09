@@ -14,7 +14,7 @@
   width: 260px;
   height: 300px;
   border-radius: 8px;
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.27);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.27);
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -78,14 +78,27 @@
   }
 }
 
-.pokemon-image {
+.pokemon-image-card {
   width: 196px;
   margin: auto;
 }
 
-.pokemon-name {
+.pokemon-name-card {
   margin: auto;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 960px) {
+  .card-wrapper {
+    width: 260px;
+    height: 300px;
+    margin: 4px auto;
+  }
+
+  .card {
+    width: 258px;
+    height: 298px;
+  }
 }
