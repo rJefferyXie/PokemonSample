@@ -1,0 +1,8 @@
+.pokedex {
+  height: 100%;
+  min-height: 100vh;
+  width: min(100vw, 960px);
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
