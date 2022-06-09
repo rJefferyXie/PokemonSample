@@ -8,6 +8,7 @@ import axios from 'axios';
 const PokemonInfo = ({ pokemonName, unselect }) => {
   const [pokemon, setPokemon] = useState({});
 
+  // Return to the home page: pokedexPage
   const exit = () => {
     unselect("");
   }
@@ -33,10 +34,28 @@ const PokemonInfo = ({ pokemonName, unselect }) => {
   }, [pokemonName]);
 
   return (
-    <div className="flex overlay" onClick={() => exit()}>
-      <div className="flex-col info-container">
-        hi
+    pokemon.abilities === undefined ? null :
+    <div className="flex-col info-container">
+      <h1 className="pokemon-name">{pokemonName}</h1>
+      <div className="flex entry-row">
+        <div className="flex-col main-section">
+          <h2 className="left section-header">INTRODUCTION</h2>
+          <p className="left">{"Pokedex Entry #" + pokemon.id}</p>
+          <p className="left">{"Height " + pokemon.height * 10 + "cm"}</p>
+          <p className="left">{"Weight " + pokemon.weight / 10 + "kg"}</p>
+          {pokemon.abilities.map((ability, idx) => {
+            return <p className={"left ability " + pokemonName} key={idx}>{ability.ability.name}</p>
+          })}
+        </div>
+        <img src={pokemon["sprites"]["other"]["official-artwork"]["front_default"]} alt={"An image of " + pokemonName} className="pokemon-image"></img>
+        <div className="flex-col main-section">
+          <h2 className="right section-header">FIRST 5 MOVES</h2>
+          {pokemon.moves.slice(0, 5).map((move, idx) => {
+            return <p className="right move" key={idx}>{move.move.name}</p>
+          })}
+        </div>
       </div>
+      <button className={"exit-button " + pokemonName} onClick={() => exit()}>RETURN TO HOME</button>
     </div>
   )
 }
