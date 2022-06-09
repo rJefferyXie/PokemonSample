@@ -30,6 +30,10 @@
   transform: translate(-50%, -50%);
 }
 
+.card-wrapper:hover {
+  filter: brightness(105%);
+}
+
 .bulbasaur-spinner:hover:before, .bulbasaur-spinner:active:before, .bulbasaur-spinner:focus:before {
   content: "";
   height: 150%;
@@ -86,6 +90,7 @@
 .pokemon-name-card {
   margin: auto;
   width: 100%;
+  font-size: 1.2rem;
   text-align: center;
   text-transform: uppercase;
 }
