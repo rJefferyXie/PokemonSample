@@ -1,0 +1,91 @@
+.bulbasaur {
+  background-color: #A7DB8D;
+}
+
+.charmander {
+  background-color: #F5AC78;
+}
+
+.squirtle {
+  background-color: #9DB7F5;
+}
+
+.card-wrapper {
+  width: 260px;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.27);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card {
+  width: 258px;
+  height: 298px;
+  position: absolute;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bulbasaur-spinner:hover:before, .bulbasaur-spinner:active:before, .bulbasaur-spinner:focus:before {
+  content: "";
+  height: 150%;
+  width: 150%;
+  position: absolute;
+  background-image: conic-gradient(
+    #58cb1f 20deg, 
+      transparent 120deg
+  );
+  left: -25%;
+  top: -25%;
+  animation: rotate 2s infinite linear;
+}
+
+.charmander-spinner:hover:before, .charmander-spinner:active:before, .charmander-spinner:focus:before {
+  content: "";
+  height: 150%;
+  width: 150%;
+  position: absolute;
+  background-image: conic-gradient(
+    #dd7d38 20deg, 
+      transparent 120deg
+  );
+  left: -25%;
+  top: -25%;
+  animation: rotate 2s infinite linear;
+}
+
+.squirtle-spinner:hover:before, .squirtle-spinner:active:before, .squirtle-spinner:focus:before {
+  content: "";
+  height: 150%;
+  width: 150%;
+  position: absolute;
+  background-image: conic-gradient(
+    #5179d5 20deg, 
+      transparent 120deg
+  );
+  left: -25%;
+  top: -25%;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  100% {
+      transform: rotate(-360deg);
+  }
+}
+
+.pokemon-image {
+  width: 196px;
+  margin: auto;
+}
+
+.pokemon-name {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
