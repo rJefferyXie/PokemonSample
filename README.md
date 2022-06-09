@@ -1,5 +1,6 @@
 Hi, welcome to a code sample from one of my larger projects, PokepediaJX.
-For a visual view of this small project, visit the following link here: https://pokemonsample.web.app
+For a visual view of this small project, visit this link: https://pokemonsample.web.app
+To look at the github repository for this sample, visit this link: https://github.com/rJefferyXie/PokemonSample
 
 View Code Sample
 1. Open the app directory.
@@ -14,3 +15,4 @@ Directory Information
 
 If you want to see the full website, feel free to visit it here at https://pokepediajx.netlify.app/
 
+By Jeffery Xie
