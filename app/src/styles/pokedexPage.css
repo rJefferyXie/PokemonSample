@@ -6,3 +6,10 @@
   align-items: center;
   margin: auto;
 }
+
+@media screen and (max-width: 960px) {
+  .pokedex {
+    flex-direction: column;
+    margin: 2rem auto 4rem;
+  }
+}

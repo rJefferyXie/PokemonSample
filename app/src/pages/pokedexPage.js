@@ -48,11 +48,9 @@ const PokedexPage = () => {
 
   return (
     <div className="flex pokedex">
-      {selectedPokemon === "" ? null : <PokemonInfo pokemonName={selectedPokemon} unselect={setSelectedPokemon}></PokemonInfo>}
-
-      {pokedex.slice(0, 3).map((pokemon, idx) => {
+      {selectedPokemon === "" ? pokedex.slice(0, 3).map((pokemon, idx) => {
         return <PokemonCard pokemonData={pokemon} key={idx} select={setSelectedPokemon}></PokemonCard>
-      })}
+      }) : <PokemonInfo pokemonName={selectedPokemon} unselect={setSelectedPokemon}></PokemonInfo>}
     </div>
   )
 }
