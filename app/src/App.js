@@ -1,7 +1,6 @@
 import './App.css';
 
 // Pages
-import PokemonPage from './pages/pokemonPage';
 import PokedexPage from './pages/pokedexPage';
 
 const App = () => {
